@@ -1,0 +1,10 @@
+test_correct_new_task (functional_tests.test_adding_new_task_selenium.NewTaskTest) ... ok
+test_incorrect_new_task_empty_description (functional_tests.test_adding_new_task_selenium.NewTaskTest) ... ok
+test_incorrect_new_task_empty_name (functional_tests.test_adding_new_task_selenium.NewTaskTest) ... ok
+test_link_to_task_list (functional_tests.test_adding_new_task_selenium.NewTaskTest) ... ok
+test_new_task_title (functional_tests.test_adding_new_task_selenium.NewTaskTest) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 118.371s
+
+OK

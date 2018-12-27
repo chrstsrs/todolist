@@ -1,0 +1,14 @@
+test_index_done_button (functional_tests.test_index_task_selenium.IndexTestDefaultDoneIsFalse) ... ok
+test_index_Show_all_Tasks (functional_tests.test_index_task_selenium.IndexTestTaskDoneIsTrueAndShowallIsFalse) ... ok
+test_index_can_access_the_new_task (functional_tests.test_index_task_selenium.IndexTestTaskDoneIsTrueAndShowallIsFalse) ... ok
+test_index_task_title (functional_tests.test_index_task_selenium.IndexTestTaskDoneIsTrueAndShowallIsFalse) ... ok
+test_index_delete_button (functional_tests.test_index_task_selenium.IndexTestTaskDoneIsTrueAndShowallIsTrue) ... ok
+test_index_edit_button (functional_tests.test_index_task_selenium.IndexTestTaskDoneIsTrueAndShowallIsTrue) ... ok
+test_index_hide_done_Tasks (functional_tests.test_index_task_selenium.IndexTestTaskDoneIsTrueAndShowallIsTrue) ... ok
+test_index_undone_button (functional_tests.test_index_task_selenium.IndexTestTaskDoneIsTrueAndShowallIsTrue) ... ok
+test_index_undone_button_yields_message_for_the_last_who_worked_on_that_task (functional_tests.test_index_task_selenium.IndexTestTaskDoneIsTrueAndShowallIsTrue) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 279.332s
+
+OK

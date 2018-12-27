@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load widget_tweaks %}
+
+{% block title %}Edit the Task{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'tdl:index' %}">Tasks</a></li>
+  <li class="breadcrumb-item active">Edit Task</li>
+{% endblock %}
+
+{% block content %}
+  <form method="post" novalidate>
+    {% csrf_token %}
+    {% include 'includes/form.html' %}
+    <button type="submit" class="btn btn-success" id="id_updateTask">Update</button>
+  </form>
+{% endblock %}

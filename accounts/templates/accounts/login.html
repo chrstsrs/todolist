@@ -1,0 +1,29 @@
+{% extends 'accounts/base_accounts.html' %}
+
+{% block title %}ToDoList Login{% endblock %}
+
+{% block content  %}
+  <div class="row justify-content-center">
+    <div class="col-lg-4 col-md-6 col-sm-8">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Log in</h3>
+          <form method="post" novalidate>
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next }}">
+            {% include 'includes/form.html' %}
+            <button id="submit_button" type="submit" class="btn btn-primary btn-block">Log in</button>
+          </form>
+        </div>
+        <div class="card-footer text-muted text-center">
+          New to ToDoList? <a href="{% url 'accounts:signup' %}">Sign up</a>
+        </div>
+      </div>
+      <div class="text-center py-2">
+        <small>
+          <a href="{% url 'accounts:password_reset' %}" style="background-color:rgb(0, 51, 204); color:rgb(153, 102, 255);" class="text-muted" > &nbsp; Forgot your password? &nbsp;</a>
+        </small>
+      </div>
+    </div>
+  </div>
+{% endblock %}

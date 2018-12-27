@@ -1,0 +1,13 @@
+test_correct_signup (functional_tests.test_signup_selenium.SignupTest) ... ok
+test_incorrect_signup_common_password (functional_tests.test_signup_selenium.SignupTest) ... ok
+test_incorrect_signup_different_passwords (functional_tests.test_signup_selenium.SignupTest) ... ok
+test_incorrect_signup_empty_email (functional_tests.test_signup_selenium.SignupTest) ... ok
+test_incorrect_signup_invalid_email (functional_tests.test_signup_selenium.SignupTest) ... ok
+test_incorrect_signup_only_numeric_password (functional_tests.test_signup_selenium.SignupTest) ... ok
+test_incorrect_signup_short_password (functional_tests.test_signup_selenium.SignupTest) ... ok
+test_incorrect_signup_with_same_username (functional_tests.test_signup_selenium.SignupTest) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 190.359s
+
+OK

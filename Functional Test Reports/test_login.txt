@@ -1,0 +1,8 @@
+test_correct_login (functional_tests.test_login_selenium.LoginTest) ... ok
+test_incorrect_login (functional_tests.test_login_selenium.LoginTest) ... ok
+test_login_title (functional_tests.test_login_selenium.LoginTest) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 68.483s
+
+OK

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block breadcrumb %}
+{% endblock %}
+
+{% block content %}
+    <div class="mb-4">
+      <a href="{% url 'tdl:new_task' %}" class="btn btn-primary" id="id_newTask">New Task</a>
+      <button id="taskFilter" class="btn btn-primary" type="button" style="float:right" value="" onclick="ShowHideDoneTasks()"></button>
+    </div>
+    <table class="table">
+      <thead class="thead-inverse">
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Issued by</th>
+          <th>Done by</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for task in tasks %}
+            <tr class={% if task.done %} "doneclass" style="background-color:rgb(214, 214, 214);" {% else %} "undoneclass" style="background-color:rgb(204, 251, 214);" {% endif %} >
+              <td> {{ task.name }}
+                {% if user == task.issued_by %}
+                  <a href="{% url 'tdl:task_edit' task.pk %}" class="btn btn-primary btn-sm"
+                    role="button"> <img alt="Edit" src="{% static 'tdl/img/edit-48.png' %}" width="24" height="24" > </a>
+                {% endif %}
+              </td>
+              <td> {{ task.description }} </td>
+              <td class="align-middle"> {{ task.issued_by }}
+                {% if user == task.issued_by %}
+                  <a href="{% url 'tdl:task_delete' task.pk %}" class="btn btn-primary btn-sm"
+                    role="button"> <img alt="Delete?" src="{% static 'tdl/img/trash-48.png' %}" width="24" height="24" > </a>
+                {% endif %}
+              </td>
+              <td class="align-middle">
+                {% if task.done %}
+                  {{ task.done_by }}
+                  {% if user == task.issued_by %}
+                    <a href="{% url 'tdl:task_undone' task.pk %}" class="btn btn-primary btn-sm" name="done_undone"
+                     role="button"> <img alt="Undone?" src="{% static 'tdl/img/undo-48.png' %}" width="24" height="24" > </a>
+                  {% endif %}
+                {% else %}
+                  <a href="{% url 'tdl:task_done' task.pk %}" class="btn btn-primary btn-sm" name="done_undone"
+                   role="button"> Done? </a>
+                  {% if task.done_by %}
+                     <small>{{ task.done_by }} has worked last</small>
+                  {% endif %}
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+{% endblock %}
+{% block scripts %}
+    <script src="{% static 'tdl/js/filter.js'%}"></script>
+{% endblock %}

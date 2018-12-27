@@ -1,0 +1,689 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Coverage report</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.ba-throttle-debounce.min.js"></script>
+    <script type="text/javascript" src="jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="coverage_html.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(coverage.index_ready);
+    </script>
+</head>
+<body class="indexfile">
+
+<div id="header">
+    <div class="content">
+        <h1>Coverage report:
+            <span class="pc_cov">99%</span>
+        </h1>
+
+        <img id="keyboard_icon" src="keybd_closed.png" alt="Show keyboard shortcuts" />
+
+        <form id="filter_container">
+            <input id="filter" type="text" value="" placeholder="filter..." />
+        </form>
+    </div>
+</div>
+
+<div class="help_panel">
+    <img id="panel_icon" src="keybd_open.png" alt="Hide keyboard shortcuts" />
+    <p class="legend">Hot-keys on this page</p>
+    <div>
+    <p class="keyhelp">
+        <span class="key">n</span>
+        <span class="key">s</span>
+        <span class="key">m</span>
+        <span class="key">x</span>
+        
+        <span class="key">c</span> &nbsp; change column sorting
+    </p>
+    </div>
+</div>
+
+<div id="index">
+    <table class="index">
+        <thead>
+            
+            <tr class="tablehead" title="Click to sort">
+                <th class="name left headerSortDown shortkey_n">Module</th>
+                <th class="shortkey_s">statements</th>
+                <th class="shortkey_m">missing</th>
+                <th class="shortkey_x">excluded</th>
+                
+                <th class="right shortkey_c">coverage</th>
+            </tr>
+        </thead>
+        
+        <tfoot>
+            <tr class="total">
+                <td class="name left">Total</td>
+                <td>1938</td>
+                <td>2</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="1936 1938">99%</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            
+            <tr class="file">
+                <td class="name left"><a href="accounts___init___py.html">accounts\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="accounts_admin_py.html">accounts\admin.py</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="1 1">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="accounts_forms_py.html">accounts\forms.py</a></td>
+                <td>10</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="10 10">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="accounts_migrations___init___py.html">accounts\migrations\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="accounts_models_py.html">accounts\models.py</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="1 1">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="accounts_tests___init___py.html">accounts\tests\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="accounts_tests_test_login_view_py.html">accounts\tests\test_login_view.py</a></td>
+                <td>36</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="36 36">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="accounts_tests_test_logout_view_py.html">accounts\tests\test_logout_view.py</a></td>
+                <td>32</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="32 32">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="accounts_tests_test_mail_password_reset_py.html">accounts\tests\test_mail_password_reset.py</a></td>
+                <td>44</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="44 44">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="accounts_tests_test_password_change_done_py.html">accounts\tests\test_password_change_done.py</a></td>
+                <td>42</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="42 42">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="accounts_tests_test_password_change_view_py.html">accounts\tests\test_password_change_view.py</a></td>
+                <td>58</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="58 58">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="accounts_tests_test_password_reset_complete_view_py.html">accounts\tests\test_password_reset_complete_view.py</a></td>
+                <td>27</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="27 27">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="accounts_tests_test_password_reset_confirm_py.html">accounts\tests\test_password_reset_confirm.py</a></td>
+                <td>53</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="53 53">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="accounts_tests_test_password_reset_done_py.html">accounts\tests\test_password_reset_done.py</a></td>
+                <td>29</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="29 29">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="accounts_tests_test_password_reset_view_py.html">accounts\tests\test_password_reset_view.py</a></td>
+                <td>52</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="52 52">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="accounts_tests_test_signup_form_py.html">accounts\tests\test_signup_form.py</a></td>
+                <td>35</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="35 35">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="accounts_tests_test_signup_view_py.html">accounts\tests\test_signup_view.py</a></td>
+                <td>54</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="54 54">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="accounts_urls_py.html">accounts\urls.py</a></td>
+                <td>7</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="7 7">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="accounts_views_py.html">accounts\views.py</a></td>
+                <td>13</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="13 13">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="functional_tests___init___py.html">functional_tests\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="functional_tests_test_adding_new_task_selenium_py.html">functional_tests\test_adding_new_task_selenium.py</a></td>
+                <td>53</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="53 53">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="functional_tests_test_change_password_done_selenium_py.html">functional_tests\test_change_password_done_selenium.py</a></td>
+                <td>30</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="30 30">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="functional_tests_test_change_password_selenium_py.html">functional_tests\test_change_password_selenium.py</a></td>
+                <td>44</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="44 44">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="functional_tests_test_edit_task_selenium_py.html">functional_tests\test_edit_task_selenium.py</a></td>
+                <td>75</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="75 75">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="functional_tests_test_index_task_selenium_py.html">functional_tests\test_index_task_selenium.py</a></td>
+                <td>134</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="134 134">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="functional_tests_test_login_selenium_py.html">functional_tests\test_login_selenium.py</a></td>
+                <td>36</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="36 36">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="functional_tests_test_password_reset_complete_selenium_py.html">functional_tests\test_password_reset_complete_selenium.py</a></td>
+                <td>28</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="28 28">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="functional_tests_test_password_reset_confirm_selenium_py.html">functional_tests\test_password_reset_confirm_selenium.py</a></td>
+                <td>52</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="52 52">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="functional_tests_test_reset_password_done_selenium_py.html">functional_tests\test_reset_password_done_selenium.py</a></td>
+                <td>23</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="23 23">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="functional_tests_test_reset_password_selenium_py.html">functional_tests\test_reset_password_selenium.py</a></td>
+                <td>25</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="25 25">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="functional_tests_test_signup_selenium_py.html">functional_tests\test_signup_selenium.py</a></td>
+                <td>87</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="87 87">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="manage_py.html">manage.py</a></td>
+                <td>9</td>
+                <td>2</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="7 9">78%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl___init___py.html">tdl\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_admin_py.html">tdl\admin.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_forms_py.html">tdl\forms.py</a></td>
+                <td>8</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="8 8">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_migrations_0001_initial_py.html">tdl\migrations\0001_initial.py</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="6 6">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_migrations_0002_auto_20181128_0805_py.html">tdl\migrations\0002_auto_20181128_0805.py</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="5 5">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_migrations_0003_auto_20181129_2059_py.html">tdl\migrations\0003_auto_20181129_2059.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_migrations_0004_auto_20181214_0633_py.html">tdl\migrations\0004_auto_20181214_0633.py</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="6 6">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_migrations___init___py.html">tdl\migrations\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_models_py.html">tdl\models.py</a></td>
+                <td>11</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="11 11">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_templatetags___init___py.html">tdl\templatetags\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_templatetags_form_tags_py.html">tdl\templatetags\form_tags.py</a></td>
+                <td>12</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="12 12">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_tests___init___py.html">tdl\tests\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_tests_test_done_view_py.html">tdl\tests\test_done_view.py</a></td>
+                <td>47</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="47 47">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_tests_test_edit_task_view_py.html">tdl\tests\test_edit_task_view.py</a></td>
+                <td>101</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="101 101">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_tests_test_index_view_py.html">tdl\tests\test_index_view.py</a></td>
+                <td>123</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="123 123">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_tests_test_models_py.html">tdl\tests\test_models.py</a></td>
+                <td>51</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="51 51">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_tests_test_new_task_view_py.html">tdl\tests\test_new_task_view.py</a></td>
+                <td>87</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="87 87">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_tests_test_newtaskform_py.html">tdl\tests\test_newtaskform.py</a></td>
+                <td>36</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="36 36">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_tests_test_show_hide_py.html">tdl\tests\test_show_hide.py</a></td>
+                <td>42</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="42 42">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_tests_test_show_hide_getval_py.html">tdl\tests\test_show_hide_getval.py</a></td>
+                <td>43</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="43 43">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_tests_test_task_delete_view_py.html">tdl\tests\test_task_delete_view.py</a></td>
+                <td>53</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="53 53">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_tests_test_templatetags_py.html">tdl\tests\test_templatetags.py</a></td>
+                <td>24</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="24 24">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_tests_test_undone_view_py.html">tdl\tests\test_undone_view.py</a></td>
+                <td>54</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="54 54">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_urls_py.html">tdl\urls.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tdl_views_py.html">tdl\views.py</a></td>
+                <td>61</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="61 61">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="todolist___init___py.html">todolist\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="todolist_settings___init___py.html">todolist\settings\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="todolist_settings_base_py.html">todolist\settings\base.py</a></td>
+                <td>19</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="19 19">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="todolist_settings_secret_key_py.html">todolist\settings\secret_key.py</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="1 1">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="todolist_settings_testing_py.html">todolist\settings\testing.py</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="6 6">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="todolist_tests___init___py.html">todolist\tests\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="todolist_tests_test_favicon_py.html">todolist\tests\test_favicon.py</a></td>
+                <td>13</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="13 13">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="todolist_tests_test_home_url_py.html">todolist\tests\test_home_url.py</a></td>
+                <td>20</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="20 20">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="todolist_urls_py.html">todolist\urls.py</a></td>
+                <td>7</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="7 7">100%</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <p id="no_rows">
+        No items found using the specified filter.
+    </p>
+</div>
+
+<div id="footer">
+    <div class="content">
+        <p>
+            <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.5.2</a>,
+            created at 2018-12-22 16:55
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
