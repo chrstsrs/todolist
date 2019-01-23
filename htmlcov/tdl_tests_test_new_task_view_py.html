@@ -225,7 +225,7 @@
 <p id="t37" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t38" class="stm run hide_run">    <span class="key">def</span> <span class="nam">test_new_url_resolves_new_view</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t39" class="stm run hide_run">        <span class="nam">view</span> <span class="op">=</span> <span class="nam">resolve</span><span class="op">(</span><span class="nam">reverse</span><span class="op">(</span><span class="str">'tdl:new_task'</span><span class="op">)</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t40" class="stm run hide_run">        <span class="nam">self</span><span class="op">.</span><span class="nam">assertEquals</span><span class="op">(</span><span class="nam">view</span><span class="op">.</span><span class="nam">func</span><span class="op">,</span> <span class="nam">new_task</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t40" class="stm run hide_run">        <span class="nam">self</span><span class="op">.</span><span class="nam">assertEquals</span><span class="op">(</span><span class="nam">view</span><span class="op">.</span><span class="nam">func</span><span class="op">.</span><span class="nam">view_class</span><span class="op">,</span> <span class="nam">new_task</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t41" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t42" class="stm run hide_run">    <span class="key">def</span> <span class="nam">test_new_task_view_contains_link_to_index_view</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t43" class="stm run hide_run">        <span class="nam">new_url</span> <span class="op">=</span> <span class="nam">reverse</span><span class="op">(</span><span class="str">'tdl:new_task'</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
@@ -312,7 +312,7 @@
     <div class="content">
         <p>
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.5.2</a>,
-            created at 2018-12-22 16:55
+            created at 2019-01-23 20:17
         </p>
     </div>
 </div>

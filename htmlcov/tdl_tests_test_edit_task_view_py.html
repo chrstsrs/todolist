@@ -242,7 +242,7 @@
 <p id="t39" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t40" class="stm run hide_run">    <span class="key">def</span> <span class="nam">test_edit_task_url_resolves_view</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t41" class="stm run hide_run">        <span class="nam">view</span> <span class="op">=</span> <span class="nam">resolve</span><span class="op">(</span><span class="nam">reverse</span><span class="op">(</span><span class="str">'tdl:task_edit'</span><span class="op">,</span> <span class="nam">kwargs</span><span class="op">=</span><span class="op">{</span><span class="str">'task_id'</span><span class="op">:</span> <span class="num">1</span><span class="op">}</span><span class="op">)</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t42" class="stm run hide_run">        <span class="nam">self</span><span class="op">.</span><span class="nam">assertEquals</span><span class="op">(</span><span class="nam">view</span><span class="op">.</span><span class="nam">func</span><span class="op">,</span> <span class="nam">task_edit</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t42" class="stm run hide_run">        <span class="nam">self</span><span class="op">.</span><span class="nam">assertEquals</span><span class="op">(</span><span class="nam">view</span><span class="op">.</span><span class="nam">func</span><span class="op">.</span><span class="nam">view_class</span><span class="op">,</span> <span class="nam">task_edit</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t43" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t44" class="stm run hide_run">    <span class="key">def</span> <span class="nam">test_edit_task_contains_form</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t45" class="stm run hide_run">        <span class="nam">url</span> <span class="op">=</span> <span class="nam">reverse</span><span class="op">(</span><span class="str">'tdl:task_edit'</span><span class="op">,</span> <span class="nam">kwargs</span><span class="op">=</span><span class="op">{</span><span class="str">'task_id'</span><span class="op">:</span> <span class="num">1</span><span class="op">}</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
@@ -342,7 +342,7 @@
     <div class="content">
         <p>
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.5.2</a>,
-            created at 2018-12-22 16:55
+            created at 2019-01-23 20:17
         </p>
     </div>
 </div>
