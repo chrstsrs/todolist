@@ -39,7 +39,7 @@ class EditTaskAuthenticatedUserTestCase(TestCase):
 
     def test_edit_task_url_resolves_view(self):
         view = resolve(reverse('tdl:task_edit', kwargs={'task_id': 1}))
-        self.assertEquals(view.func, task_edit)
+        self.assertEquals(view.func.view_class, task_edit)
 
     def test_edit_task_contains_form(self):
         url = reverse('tdl:task_edit', kwargs={'task_id': 1})

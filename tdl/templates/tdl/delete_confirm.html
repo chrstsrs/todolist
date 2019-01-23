@@ -2,17 +2,17 @@
 
 {% load widget_tweaks %}
 
-{% block title %}Issue a New Task{% endblock %}
+{% block title %}Delete the Task{% endblock %}
 
 {% block breadcrumb %}
   <li class="breadcrumb-item"><a href="{% url 'tdl:index' %}">Tasks</a></li>
-  <li class="breadcrumb-item active">New Task</li>
+  <li class="breadcrumb-item active">Delete Task</li>
 {% endblock %}
 
 {% block content %}
   <form method="post" novalidate>
     {% csrf_token %}
-    {% include 'includes/form.html' %}
-    <button type="submit" class="btn btn-success" id="id_postNewTask">Post</button>
+    <p>Are you sure you want to delete "{{ task.name }}"?</p>
+    <button type="submit" class="btn btn-success" id="id_deleteTask">Confirm</button> 
   </form>
 {% endblock %}

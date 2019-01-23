@@ -38,7 +38,7 @@ class IndexTests(TestCase):
 
     def test_index_url_resolves_index_view(self):
         view = resolve(reverse('tdl:index'))
-        self.assertEquals(view.func, index)
+        self.assertEquals(view.func.view_class, index)
 
     def test_index_view_contains_link_new_task(self):
         new_task_url = reverse('tdl:new_task')
@@ -125,8 +125,9 @@ class IndexTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertNumQueries(1)
         Task.objects.create(name='second task',
-                            description='second task description', issued_by=self.user)
-        response_tasks = response.context['tasks'].values('name')
+                                 description='second task description', issued_by=self.user)
+        self.assertNumQueries(2)
+        response_tasks = self.client.get(reverse('tdl:index')).context['tasks'].values('name')
         dct = [dict(elem) for elem in response_tasks]
         names = [d['name'] for d in dct]
         self.assertTrue('another task' in names)

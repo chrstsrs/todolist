@@ -1,17 +1,23 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
+from django.urls import reverse_lazy
 from django.http import HttpResponse, response
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from .models import Task, Preferences
 from .forms import NewTaskForm
 
 
-@login_required
-def index(request):
-    tasks = Task.objects.all()
-    userid = request.user.pk
-    user = request.user
-    return render(request, 'tdl/index.html', {'tasks': tasks, 'user': user})
+class index(LoginRequiredMixin, ListView):
+    model = Task
+    template_name = 'tdl/index.html'
+    context_object_name = 'tasks'
+    paginate_by = 3
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.order_by('pk')
 
 
 @login_required
@@ -31,42 +37,42 @@ def show_hide_getval(request):
     return HttpResponse(preferences.show_all)
 
 
-@login_required
-def new_task(request):
-    if request.method == 'POST':
-        form = NewTaskForm(request.POST)
-        if form.is_valid():
-            task = form.save(commit=False)
-            task.issued_by = request.user
-            task.save()
-            return redirect('tdl:index')
-    else:
-        form = NewTaskForm()
-    return render(request, 'tdl/new_task.html', {'form': form})
+class new_task(LoginRequiredMixin, CreateView):
+    model = Task
+    form_class = NewTaskForm
+    template_name = 'tdl/new_task.html'
+    context_object_name = 'form'
+
+    def form_valid(self, form):
+        task = form.save(commit=False)
+        task.issued_by = self.request.user
+        task.save()
+        return redirect('tdl:index')
 
 
-@login_required
-def task_edit(request, task_id):
-    if request.method == 'POST':
-        form = NewTaskForm(request.POST)
-        if form.is_valid():
-            formtask = form.save(commit=False)
-            task = Task.objects.get(pk=task_id)
-            task.name = formtask.name
-            task.description = formtask.description
-            task.save()
-            return redirect('tdl:index')
-    else:
-        task = get_object_or_404(Task, pk=task_id, issued_by=request.user)
-        form = NewTaskForm(initial={'name': task.name, 'description': task.description})
-    return render(request, 'tdl/edit.html', {'form': form})
+class task_edit(LoginRequiredMixin, UpdateView):
+    model = Task
+    form_class = NewTaskForm
+    template_name = 'tdl/edit.html'
+    context_object_name = 'form'
+    pk_url_kwarg = 'task_id'
+    success_url = reverse_lazy('tdl:index')
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(issued_by=self.request.user)
 
 
-@login_required
-def task_delete(request, task_id):
-    task = get_object_or_404(Task, pk=task_id, issued_by=request.user)
-    task.delete()
-    return redirect('tdl:index')
+class task_delete(LoginRequiredMixin, DeleteView):
+    model = Task
+    success_url = reverse_lazy('tdl:index')
+    pk_url_kwarg = 'task_id'
+    template_name = 'tdl/delete_confirm.html'
+    context_object_name = 'task'
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(issued_by=self.request.user)
 
 
 @login_required

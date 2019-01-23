@@ -1,18 +1,3 @@
-/*$.ajaxSetup({
-  beforeSend: function(jqXHR, settings) {
-      if (settings.url.split('?').length > 1) {
-         settings.url = settings.url + '&ajax=1';
-      }
-      else {
-          settings.url = settings.url + '?ajax=1';
-      }
-   },
-data: {
-    ajax: '1'
-  }
-});
-*/
-
 var XMLHttpRequestObject = false;
 
 if (window.XMLHttpRequest) {

@@ -11,7 +11,6 @@ class PreferencesAuthenticatedUserTestCase(TestCase):
     def setUpTestData(cls):
         user = User.objects.create_user(
             username='tommy', email='tommy@dumy.com', password='asdf1234')
-        Preferences.objects.create(user=user, show_all=False)
 
     def setUp(self):
         self.client.login(username='tommy', password='asdf1234')
@@ -42,7 +41,6 @@ class InitialPreferencesReturnedTestCases(TestCase):
     def test_show_hide_getval_returns_correct_HttpResponse_case_False(self):
         user = User.objects.create_user(
             username='tommy', email='tommy@dumy.com', password='asdf1234')
-        Preferences.objects.create(user=user, show_all=False)
         self.client.login(username='tommy', password='asdf1234')
         url = reverse('tdl:show_hide_getval')
         response = self.client.get(url)
@@ -51,7 +49,7 @@ class InitialPreferencesReturnedTestCases(TestCase):
     def test_show_hide_getval_returns_correct_HttpResponse_case_True(self):
         user = User.objects.create_user(
             username='tommy', email='tommy@dumy.com', password='asdf1234')
-        Preferences.objects.create(user=user, show_all=True)
+        Preferences.objects.filter(user=user).update(show_all=True)
         self.client.login(username='tommy', password='asdf1234')
         url = reverse('tdl:show_hide_getval')
         response = self.client.get(url)

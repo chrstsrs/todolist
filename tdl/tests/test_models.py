@@ -56,7 +56,6 @@ class PreferencesModelTests(TestCase):
     def setUpTestData(cls):
         User.objects.create_user(username='tom', email='tom@dummy.com', password='asdf1234')
         user = User.objects.first()
-        Preferences.objects.create(user=user, show_all=False)
 
     def test_field_label_user(self):
         preferences = Preferences.objects.first()

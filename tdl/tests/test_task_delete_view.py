@@ -23,8 +23,7 @@ class DeleteTaskAuthenticatedUserTestCase(TestCase):
     def test_task_delete_view_status_code_for_valid_task(self):
         url = reverse('tdl:task_delete', kwargs={'task_id': 1})
         response = self.client.get(url, follow=True)
-        self.assertRedirects(response, reverse('tdl:index'),
-                             status_code=302, target_status_code=200)
+        self.assertEquals(response.status_code, 200)
 
     def test_task_delete_view_status_code_for_invalid_task(self):
         url = reverse('tdl:task_delete', kwargs={'task_id': 99})
@@ -33,7 +32,7 @@ class DeleteTaskAuthenticatedUserTestCase(TestCase):
 
     def test_task_delete_url_resolves_view(self):
         view = resolve(reverse('tdl:task_delete', kwargs={'task_id': 1}))
-        self.assertEquals(view.func, task_delete)
+        self.assertEquals(view.func.view_class, task_delete)
 
     def test_task_delete_invalid_user(self):
         self.client.logout()
@@ -45,7 +44,7 @@ class DeleteTaskAuthenticatedUserTestCase(TestCase):
     def test_task_delete_view_uses_correct_template(self):
         response = self.client.get('/todolist/task_delete/1/', follow=True)
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'tdl/index.html')
+        self.assertTemplateUsed(response, 'tdl/delete_confirm.html')
 
     def test_task_delete_view_uses_base_template(self):
         response = self.client.get('/todolist/task_delete/1/', follow=True)

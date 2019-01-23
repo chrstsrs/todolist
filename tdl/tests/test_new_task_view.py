@@ -37,7 +37,7 @@ class NewTaskTests(TestCase):
 
     def test_new_url_resolves_new_view(self):
         view = resolve(reverse('tdl:new_task'))
-        self.assertEquals(view.func, new_task)
+        self.assertEquals(view.func.view_class, new_task)
 
     def test_new_task_view_contains_link_to_index_view(self):
         new_url = reverse('tdl:new_task')
