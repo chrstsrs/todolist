@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
+from django.shortcuts import render, redirect, get_object_or_404
 
 from tdl.models import Task, Preferences
 
@@ -18,7 +19,6 @@ class IndexTestTaskDoneIsTrueAndShowallIsFalse(StaticLiveServerTestCase):
         self.user = User.objects.first()
         Task.objects.create(name='This task has been Done',
                             description='testing page', issued_by=self.user, done=True, done_by=self.user)
-        Preferences.objects.create(user=self.user, show_all=False)
 
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(5)
@@ -81,7 +81,7 @@ class IndexTestTaskDoneIsTrueAndShowallIsTrue(StaticLiveServerTestCase):
         self.user = User.objects.first()
         Task.objects.create(name='This is a task',
                             description='testing page', issued_by=self.user, done=True, done_by=self.user)
-        Preferences.objects.create(user=self.user, show_all=True)
+        Preferences.objects.filter(user=self.user).update(show_all=True)
 
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(5)
@@ -182,6 +182,16 @@ class IndexTestTaskDoneIsTrueAndShowallIsTrue(StaticLiveServerTestCase):
         time.sleep(3)
 
         # check the returned result
+        assert 'This is a task' in self.driver.page_source
+
+        # find the confirm button
+        self.confirm = self.driver.find_element_by_id('id_deleteTask')
+
+        # click it
+        self.confirm.click()
+        time.sleep(3)
+
+        # check the returned result
         assert 'This is a task' not in self.driver.page_source
 
 
@@ -191,7 +201,6 @@ class IndexTestDefaultDoneIsFalse(StaticLiveServerTestCase):
         self.user = User.objects.first()
         Task.objects.create(name='This is a task',
                             description='testing page', issued_by=self.user, done=False, done_by=self.user)
-        Preferences.objects.create(user=self.user)
 
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(5)
