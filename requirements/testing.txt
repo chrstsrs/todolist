@@ -1,6 +1,6 @@
 -r base.txt
 coverage==4.5.2
 html-testRunner==1.1.2
-Jinja2==2.9.5
+Jinja2==2.11.3
 MarkupSafe==1.1.0
 selenium==3.12.0
