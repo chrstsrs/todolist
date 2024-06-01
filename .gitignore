@@ -5,3 +5,7 @@ db.sqlite3
 .DS_Store
 secret_key.py
 .env
+.idea
+envv
+venv
+migrations

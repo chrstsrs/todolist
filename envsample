@@ -1,0 +1,12 @@
+SECRET_KEY=*xt@!yb*z!q*!#wnca_q-2032m)+*80r2n=x)0i5sf=tafj21z
+ALLOWED_HOSTS=localhost,127.0.0.1
+DB_NAME=tdl_db
+DB_USER=manager1
+DB_PASSWORD=manager1_manager1
+DB_HOST=db
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST='smtp.sparkpostmail.com'
+EMAIL_PORT=587
+EMAIL_HOST_USER='SMTP_Injection'
+EMAIL_HOST_PASSWORD='d840db1425eced3cc5e690501b9b421f5082a240'
+EMAIL_USE_TLS=Yes
